@@ -4,7 +4,7 @@
   "description": "a twitter bot for real madrid news",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/boys-who-code/halamadridbot#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "twit": "^2.2.11"
   }
 }

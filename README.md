@@ -1,2 +1,2 @@
 # halamadridbot
-a twitter bot that retweets content about real madrid
+a twitter bot that retweets or post content about real madrid

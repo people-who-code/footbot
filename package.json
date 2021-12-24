@@ -1,0 +1,28 @@
+{
+  "name": "halamadridbot",
+  "version": "1.0.0",
+  "description": "a twitter bot for real madrid news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boys-who-code/halamadridbot.git"
+  },
+  "keywords": [
+    "hala",
+    "madrid",
+    "real",
+    "madrid"
+  ],
+  "author": "Eurika & BlackDante101",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boys-who-code/halamadridbot/issues"
+  },
+  "homepage": "https://github.com/boys-who-code/halamadridbot#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}

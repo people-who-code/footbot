@@ -1,27 +1,27 @@
 {
   "name": "halamadridbot",
   "version": "1.0.0",
-  "description": "a twitter bot for real madrid news",
+  "description": "a twitter bot post football updates",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boys-who-code/halamadridbot.git"
+    "url": "git+https://github.com/boys-who-code/footbot.git"
   },
   "keywords": [
-    "hala",
-    "madrid",
-    "real",
-    "madrid"
+    "football",
+    "footbot",
+    "football bot",
+    "football news"
   ],
   "author": "Eurika & BlackDante101",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/boys-who-code/halamadridbot/issues"
+    "url": "https://github.com/boys-who-code/footbot/issues"
   },
-  "homepage": "https://github.com/boys-who-code/halamadridbot#readme",
+  "homepage": "https://github.com/boys-who-code/footbot#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "twit": "^2.2.11"

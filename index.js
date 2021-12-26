@@ -41,4 +41,16 @@ function responseCallback (err, data, response) {
       console.log(tweet);
       });
  
+      // replies after mention code block
+      var replystream = T.stream('statuses/filter',{track:'@footb0t'});
+
+      replystream.on('tweet',function(tweet){
+        var id = tweet.id_str;
+        var text = tweet.text;
+        var username = tweet.user.screen_name;
+        var replyText = "Hello World";
+        console.log(replyText);
+  
+         T.post('statuses/update',{status:replyText , in_reply_to_status_id: id},responseCallback);
+      })
    

@@ -39,22 +39,39 @@ var stream = T.stream('statuses/filter', { follow: users });
 stream.on('tweet', function (tweet) {
 
   if (tweet.text.includes('@footb0t')) {
-  console.log(tweet)
+    // console.log(tweet)
 
     const season = tweet.match(/\b\d{4}\b/g)[0];
-    const isLeague = tweet.toLowerCase().includes("league") ? true : false;
+    const isCurrent = new Date().getFullYear() == season ? true : false;
     const seachQuery = tweet.replace(/\b\d{4}\b/g, "");
+    var config = {
+      method: 'get',
+      url: 'https://v3.football.api-sports.io/leagues',
+      headers: {
+        'x-rapidapi-key': process.env.FOOT_BALL_API_KEY,
+        'x-rapidapi-host': 'v3.football.api-sports.io'
+      },
+      params: { season: season, search: searchQuery, current: "true" }
+    };
+
+    axios(config)
+      .then(function (response) {
+        T.post('statuses/update', { status: response, in_reply_to_status_id: tweet.id_str }, function (err, data, response) {
+          if (data) {
+            console.log(data);
+          } else if (response) {
+            console.log(response);
+          } else {
+            console.log(err)
+          }
+        });
+
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     // T.post('statuses/retweet/:id', { id: tweet.id_str }, responseCallback);
     console.log(tweet);
-    T.post('statuses/update', { status: "wah goan mi gee? mi cyaan provide such info right now but soon!! Trust mi chargie", in_reply_to_status_id: tweet.id_str }, function (err, data, response) {
-      if(data){
-      console.log(data);
-      }else if (response){
-        console.log(response);
-      }else{
-        console.log(err)
-      }
-    });
 
   }
   // if(tweet)

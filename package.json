@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boys-who-code/footbot.git"
+    "url": "git+https://github.com/people-who-code/footbot.git"
   },
   "keywords": [
     "football",
@@ -19,9 +19,9 @@
   "author": "Eurika & BlackDante101",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/boys-who-code/footbot/issues"
+    "url": "https://github.com/people-who-code/footbot/issues"
   },
-  "homepage": "https://github.com/boys-who-code/footbot#readme",
+  "homepage": "https://github.com/people-who-code/footbot#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "dotenv": "^10.0.0",

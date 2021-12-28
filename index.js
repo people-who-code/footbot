@@ -41,8 +41,9 @@ stream.on('tweet', function (tweet) {
   if (tweet.text.includes('@footb0t')) {
   console.log(tweet)
 
-    const season = tweet.match(/\b\d{4}\b/g);
+    const season = tweet.match(/\b\d{4}\b/g)[0];
     const isLeague = tweet.toLowerCase().includes("league") ? true : false;
+    const seachQuery = tweet.replace(/\b\d{4}\b/g, "");
     // T.post('statuses/retweet/:id', { id: tweet.id_str }, responseCallback);
     console.log(tweet);
     T.post('statuses/update', { status: "wah goan mi gee? mi cyaan provide such info right now but soon!! Trust mi chargie", in_reply_to_status_id: tweet.id_str }, function (err, data, response) {

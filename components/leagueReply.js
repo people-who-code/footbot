@@ -2,7 +2,7 @@ const T = require('../config');
 const { getLeague } = require('./getLeague');
 
 const leagueReply = () => {
-  var replystream = T.stream('statuses/filter', { track: '@footb0t league' });
+  var replystream = T.stream('statuses/filter', { track: '@footb0t' });
 
   replystream.on('tweet', function (tweet) {
     const season = tweet.match(/\b\d{4}\b/g)[0];

@@ -5,7 +5,7 @@ const leagueReply = () => {
   var replystream = T.stream('statuses/filter', { track: '@footb0t league' });
 
   replystream.on('tweet', function (tweet) {
-    const season = tweet.match(/\b\d{4}\b/g)[0];
+    const season = tweet.text.match(/\b\d{4}\b/g)[0];
     const isCurrent = new Date().getFullYear() == season ? true : false;
     const seachQuery = tweet.replace(/\b\d{4}\b/g, "");
     // T.post('statuses/retweet/:id', { id: tweet.id_str }, responseCallback);

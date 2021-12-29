@@ -12,7 +12,7 @@ const leagueReply = () => {
     // console.log(tweet.id_str);
     var output = getLeague(season, seachQuery, isCurrent);
     var replyForQueryTweet = `Name:${output.response[0].league.name}\n Country:${output.response[0].country['name']}\n Seasons:${output.response[0].seasons['start']}-${output.response[0].seasons['end']}`
-    T.post('statuses/update', { status: "wah goan mi gee? mi cyaan provide such info right now but soon!! Trust mi chargie", in_reply_to_status_id: tweet.id_str }, function (err, data, response) {
+    T.post('statuses/update', { status: replyForQueryTweet, in_reply_to_status_id: tweet.id_str }, function (err, data, response) {
       console.log(response)
     });
 

@@ -3,7 +3,7 @@ const T = require('./config.js');
  const getPlayerStats = require('./components/getPlayerStats');
  const retweetNews = require('./components/retweetNews');
  const leagueReply = require('./components/leagueReply');
-
+const axios = require('axios');
 const express = require('express');
 const app = express();
 app.get('/',(req,res)=>res.send(<b>Home page for footb0t</b>))

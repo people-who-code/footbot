@@ -3,7 +3,7 @@ require('dotenv').config()
 const T = require('../config')
 
  const getPlayerStats = ()=>{
-    var player_id = 13;//Math.floor((Math.random() * 500) + 1);
+    var player_id =Math.floor((Math.random() * 500) + 1);
     var dt = new Date();
     var season = dt.getFullYear(); 
     

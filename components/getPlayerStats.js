@@ -3,7 +3,7 @@ require('dotenv').config()
 const T = require('../config')
 
  const getPlayerStats = ()=>{
-    var player_id = Math.floor((Math.random() * 500) + 1);
+    var player_id = 13;//Math.floor((Math.random() * 500) + 1);
     var dt = new Date();
     var season = dt.getFullYear(); 
     
@@ -21,7 +21,10 @@ const T = require('../config')
        if (error) throw new Error(error);
        
        var data = JSON.parse(body);
-   
+       var count= Object.keys(data.response).length;
+       console.log(data)
+      if(count!=0){
+
      var fname = data.response[0].player.firstname;
      var lname = data.response[0].player.lastname;
      var appearances = data.response[0].statistics[0].games.appearences;
@@ -35,6 +38,10 @@ const T = require('../config')
            T.post('statuses/update', { status: msg }, function(err, data, response) {
              console.log(data)
             })
+  }
+  else{
+    console.log("user not found")
+  }
       
       
       

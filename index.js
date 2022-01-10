@@ -6,7 +6,7 @@ const T = require('./config.js');
 const axios = require('axios');
 const express = require('express');
 const app = express();
-app.get('/',(req,res)=>res.send(<b>Home page for footb0t</b>))
+app.get('/',(req,res)=>res.send('<b>Home page for footb0t</b>'))
 
 //leagueReply(); // reply to '@footb0t league' mention
 

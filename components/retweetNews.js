@@ -11,7 +11,6 @@ const retweetNews =()=> {
     '11096152', // @101greatgoals
     '44606764', // @OptaJoe
     ' 87036741', // @Zonal_marking
-    '176754253', // @BeardedGenius
     '11096152', // @101greatgoals
     
   
